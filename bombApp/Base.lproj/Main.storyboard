@@ -18,13 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7TP-0L-FJ2">
-                                <rect key="frame" x="122" y="318" width="130" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zo-4m-nLN">
+                                <rect key="frame" x="114" y="274" width="158" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Gamestart"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                                <state key="normal" title="start"/>
                                 <connections>
-                                    <action selector="tapstart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2jq-Xm-6zI"/>
+                                    <action selector="gobomb:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MVU-KZ-yhN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -36,5 +36,57 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
+        <!--bombPages-->
+        <scene sceneID="ine-fu-MX3">
+            <objects>
+                <viewController storyboardIdentifier="bombpage" title="bombPages" id="Jbc-Hl-PjC" customClass="BombController" customModule="bombApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="unl-z4-Tkq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bomb" translatesAutoresizingMaskIntoConstraints="NO" id="tUT-bW-v85">
+                                <rect key="frame" x="73" y="20" width="286" height="270"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0g-xN-S1d">
+                                <rect key="frame" x="246" y="532" width="113" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="もどる"/>
+                                <connections>
+                                    <action selector="back:" destination="Jbc-Hl-PjC" eventType="touchUpInside" id="Xq7-D1-pIk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Xh-1v-OlH">
+                                <rect key="frame" x="112" y="362" width="150" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <state key="normal" title="Tap!!!"/>
+                                <connections>
+                                    <action selector="tapbomb:" destination="Jbc-Hl-PjC" eventType="touchUpInside" id="vnM-9B-Wr7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQA-1Y-pe9">
+                                <rect key="frame" x="81" y="567" width="79" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="9Yu-SW-GZb"/>
+                    </view>
+                    <connections>
+                        <outlet property="counttap" destination="MQA-1Y-pe9" id="CH5-VY-toz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="66g-SV-HRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1084" y="132.68365817091455"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="bomb" width="1260" height="1248"/>
+    </resources>
 </document>

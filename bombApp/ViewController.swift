@@ -10,7 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBAction func tapstart(_ sender: Any) {
+    @IBAction func gobomb(_ sender: Any) {
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "bombpage")
+        nextVC?.modalTransitionStyle = .flipHorizontal
+        present(nextVC!, animated: true, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
